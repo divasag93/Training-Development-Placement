@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{330963CA-F0F9-47AD-B779-F4B4A903D1C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1.Account</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="connect-Deployment" Order="1">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=LENOVO\SQLEXPRESS%3bInitial Catalog=Login_Page%3bIntegrated Security=True" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\connect-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="cn-Deployment" Order="2" xmlns="">
+          <Destination Path="" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=DIVAS\SQLEXPRESS%3bInitial Catalog=Login_Page%3bIntegrated Security=true" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\cn-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AddCompany.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="Applied.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="Company.aspx" />
+    <Content Include="contactus.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="DeleteCompany.aspx" />
+    <Content Include="DeleteJob.aspx" />
+    <Content Include="Details.aspx" />
+    <Content Include="font-awesome\css\font-awesome.min.css" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\11.jpg" />
+    <Content Include="img\2.jpg" />
+    <Content Include="img\3.jpg" />
+    <Content Include="img\33.jpg" />
+    <Content Include="img\4.jpg" />
+    <Content Include="img\5.png" />
+    <Content Include="img\6.png" />
+    <Content Include="img\ad.png" />
+    <Content Include="img\asg.jpg" />
+    <Content Include="img\assignment.jpg" />
+    <Content Include="img\b2.jpg" />
+    <Content Include="img\b3.jpg" />
+    <Content Include="img\banner-img5.jpg" />
+    <Content Include="img\changepass.jpg" />
+    <Content Include="img\details.jpg" />
+    <Content Include="img\editprofile.jpg" />
+    <Content Include="img\material.jpg" />
+    <Content Include="img\pp.jpg" />
+    <Content Include="img\previos.jpg" />
+    <Content Include="img\q1.jpg" />
+    <Content Include="img\query.jpg" />
+    <Content Include="img\quiz.jpg" />
+    <Content Include="img\result.jpg" />
+    <Content Include="img\Results.jpg" />
+    <Content Include="img\sr.jpg" />
+    <Content Include="img\sreg.gif" />
+    <Content Include="img\SRMS_Logo.jpg" />
+    <Content Include="img\treg.jpg" />
+    <Content Include="img\tutorial.jpg" />
+    <Content Include="img\ul.jpg" />
+    <Content Include="img\um.jpg" />
+    <Content Include="img\uploadass.png" />
+    <Content Include="img\uploadquiz.jpg" />
+    <Content Include="img\ut.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="JobPost.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="js\plugins\camera\css\camera.css" />
+    <Content Include="js\plugins\camera\images\blank.gif" />
+    <Content Include="js\plugins\camera\images\camera-loader.gif" />
+    <Content Include="js\plugins\camera\images\camera_skins.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay1.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay10.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay2.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay3.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay4.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay5.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay6.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay7.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay8.png" />
+    <Content Include="js\plugins\camera\images\patterns\overlay9.png" />
+    <Content Include="js\plugins\camera\js\camera.min.js" />
+    <Content Include="js\plugins\camera\js\jquery.easing.1.3.js" />
+    <Content Include="js\plugins\camera\js\jquery.mobile.customized.min.js" />
+    <Content Include="js\plugins\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="js\plugins\magnific-popup\magnific-popup.css" />
+    <Content Include="js\plugins\shuffle\jquery.shuffle.modernizr.min.js" />
+    <Content Include="obj\Debug\ILP.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\m learning wcet.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\m learning wcet.dll" />
+    <Content Include="obj\Debug\m learning wcet.pdb" />
+    <Content Include="obj\Debug\Shiksha.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Shiksha.dll" />
+    <Content Include="obj\Debug\Shiksha.pdb" />
+    <Content Include="obj\Debug\TDP.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WebApplication1.dll" />
+    <Content Include="obj\Debug\WebApplication1.pdb" />
+    <Content Include="Pictures\fb.png" />
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
+    <Content Include="Images\6.jpg" />
+    <Content Include="Images\7.jpg" />
+    <Content Include="LogoutUser.aspx" />
+    <Content Include="Pictures\mail1.png" />
+    <Content Include="Pictures\AddressBook.png" />
+    <Content Include="Pictures\auto.gif" />
+    <Content Include="Pictures\chairman_devmurti.jpg" />
+    <Content Include="Pictures\chirodeep.jpg" />
+    <Content Include="Pictures\comp.jpg" />
+    <Content Include="Pictures\facebook.png" />
+    <Content Include="Pictures\faraz.jpg" />
+    <Content Include="Pictures\gplius.png" />
+    <Content Include="Pictures\grad.png" />
+    <Content Include="Pictures\graduation-png-0.png" />
+    <Content Include="Pictures\ins.jpg" />
+    <Content Include="Pictures\linked.png" />
+    <Content Include="Pictures\mail.png" />
+    <Content Include="Pictures\manish.jpg" />
+    <Content Include="Pictures\phone.png" />
+    <Content Include="Pictures\proc.jpg" />
+    <Content Include="Pictures\proc.png" />
+    <Content Include="Pictures\salabh.jpg" />
+    <Content Include="Pictures\std.jpg" />
+    <Content Include="Pictures\subodh.jpg" />
+    <Content Include="Pictures\tpd.jpg" />
+    <Content Include="Pictures\twitter.png" />
+    <Content Include="Pictures\place.jpg" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="SignUpStudent.aspx" />
+    <Content Include="StudentLogin.aspx" />
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCompany.aspx.cs">
+      <DependentUpon>AddCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCompany.aspx.designer.cs">
+      <DependentUpon>AddCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applied.aspx.cs">
+      <DependentUpon>Applied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applied.aspx.designer.cs">
+      <DependentUpon>Applied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="code\Email.cs" />
+    <Compile Include="code\RandomUtil.cs" />
+    <Compile Include="code\returnbrsem.cs" />
+    <Compile Include="code\validate.cs" />
+    <Compile Include="Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCompany.aspx.cs">
+      <DependentUpon>DeleteCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteCompany.aspx.designer.cs">
+      <DependentUpon>DeleteCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteJob.aspx.cs">
+      <DependentUpon>DeleteJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteJob.aspx.designer.cs">
+      <DependentUpon>DeleteJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobPost.aspx.cs">
+      <DependentUpon>JobPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobPost.aspx.designer.cs">
+      <DependentUpon>JobPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogoutUser.aspx.cs">
+      <DependentUpon>LogoutUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogoutUser.aspx.designer.cs">
+      <DependentUpon>LogoutUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUpStudent.aspx.cs">
+      <DependentUpon>SignUpStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUpStudent.aspx.designer.cs">
+      <DependentUpon>SignUpStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLogin.aspx.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentLogin.aspx.designer.cs">
+      <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="font-awesome\fonts\fontawesome-webfont93e3.eot" />
+    <None Include="font-awesome\fonts\fontawesome-webfont93e3.svg" />
+    <None Include="font-awesome\fonts\fontawesome-webfont93e3.ttf" />
+    <None Include="font-awesome\fonts\fontawesome-webfont93e3.woff" />
+    <None Include="font-awesome\fonts\fontawesome-webfont93e3.woff2" />
+    <None Include="font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.svg" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="fonts\glyphicons-halflings-regulard41d.eot" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ILP.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\m learning wcet.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\Shiksha.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\TDP.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7454</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
